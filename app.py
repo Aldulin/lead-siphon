@@ -16,9 +16,10 @@ if not st.session_state.auth:
     pw = st.text_input("Enter access password:", type="password")
     if pw == PASSWORD:
         st.session_state.auth = True
-        st.experimental_rerun()
+        st.experimental_rerun() if hasattr(st, "experimental_rerun") else st.stop()
     else:
         st.stop()
+
 
 # Tabs
 tabs = st.tabs(["🗺️ Scrape GMaps", "📧 Email Extractor"])
