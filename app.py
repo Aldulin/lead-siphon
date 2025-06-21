@@ -8,7 +8,7 @@ st.set_page_config(page_title="Lead Siphon", layout="centered")
 st.title("🔍 Lead Siphon - Google Maps Scraper")
 
 # Basic auth gate
-PASSWORD = os.getenv("LEAD_SIPHON_PASSWORD", "demo123")
+PASSWORD = os.getenv("LEAD_SIPHON_PASSWORD", "fefifu")
 if "auth" not in st.session_state:
     st.session_state.auth = False
 
